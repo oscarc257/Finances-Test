@@ -36,11 +36,13 @@ describe('calculateMonthlyPayment tests', function () {
   });
 
 
+//   This test case verifies that when there is no deferment period (defermentMonths is set to 0), the function correctly calculates the regular monthly payment for a $10,000 loan amount, 10 years term, and 4% interest rate.
  it("should calculate a low interest rate", function() {
     const values = {
         amount: 10000,
         years: 10,
-        rate: 4
+        rate: 4,
+        defermentMonths: 0 // No deferment period
     };
     expect(calculateMonthlyPayment(values)).toEqual('101.25')
  })
